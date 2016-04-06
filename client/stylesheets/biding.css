@@ -1,0 +1,32 @@
+.biding{
+  margin-top: 5rem;
+  height: 30rem;
+}
+.biding-top, .biding-down{
+  border: solid 0.5px;
+}
+.biding-top{
+  width: 100%;
+  height: 20rem;
+}
+
+.biding-down{
+  width: 100%;
+  height: 10rem;
+}
+
+.biding-top img{
+  width: 100%;
+  height: 20rem;
+}
+.biding-graph{
+  width: 100%;
+  height: 30rem;
+  border: solid 0.5px;
+}
+.biding-input-buttion{
+  margin-top: 1rem;
+}
+.biding .col-md-4{
+  padding: 0;
+}

@@ -1,0 +1,34 @@
+<template name="biding">
+  <div class="biding">
+    <div class="col-md-4">
+      <div class="biding-item-image biding-top">
+        <img src="{{image}}">
+      </div>
+      <div class="biding-item-detail biding-down">
+        <div>ID: Lot-{{_id}}</div>
+        <div>Name: {{name}}</div>
+        <div>Starting bid: {{initPrice}}</div>
+        <div>seller's estimate: {{estimatePriceFrom}} ~ {{estimatePriceTo}}</div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="biding-paddle biding-top">
+        {{> bidtext }}
+      </div>
+      <div class="biding-down">
+        <form class="biding-input-buttion">
+          <div class="form-group text-center">
+            <label>$: </label>
+            <input type="text"/>
+          </div>
+          <div class="text-center">
+            <button type="submit"  class="btn btn-success"> Bid</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="biding-graph"></div>
+    </div>
+  </div>
+</template>

@@ -1,5 +1,6 @@
 ItemSchema = new SimpleSchema({
   name: { type: String },
+  image: { type: String },
   initPrice: { type: Number },
   description: { type: String },
   estimatePriceFrom: { type: Number },
