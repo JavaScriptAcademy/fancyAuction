@@ -5,6 +5,10 @@ Router.configure({
 Router.route('/biding/:_id', {
   name: 'biding',
   data: function() {
-    // console.log(Items.findOne(this.params._id));
     return Items.findOne(this.params._id); }
 });
+
+/*Router.route('/signinregister', {
+  name: 'signinRegister',
+  template: 'signinRegister'
+});*/
