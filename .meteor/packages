@@ -26,3 +26,5 @@ aldeed:simple-schema
 aldeed:collection2
 accounts-ui
 accounts-password
+d3js:d3
+nvd3:nvd3

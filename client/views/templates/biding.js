@@ -1,6 +1,9 @@
 Template.biding.helpers({
+  item: function(){
+    return Items.findOne({_id: this.itemId});
+  },
   bidPrices: function(){
-    var auction = Auctions.findOne({ itemId: this._id });
+    var auction = Auctions.findOne({ itemId: this.itemId });
     if(auction){
       if(auction.bidPrices.length <= 4){
       return auction.bidPrices;
@@ -16,9 +19,9 @@ Template.biding.helpers({
 Template.biding.events({
   'submit form': function(e){
     e.preventDefault();
-    var item = Items.findOne({ _id: this._id });
+    var item = Items.findOne({ _id: this.itemId });
     var largestPrice = item.initPrice;
-    var auction = Auctions.findOne({ itemId: this._id });
+    var auction = Auctions.findOne({ itemId: this.itemId });
     if(auction !== undefined){
       largestPrice = auction.bidPrices[auction.bidPrices.length-1].price;
     }
@@ -31,7 +34,7 @@ Template.biding.events({
       $(e.target).find('[name=price]').val('');
     }else{
       var bidItem = {
-        itemId: this._id,
+        itemId: this.itemId,
         bidPrice:{
           price: $(e.target).find('[name=price]').val(),
           customerId: Meteor.user()._id,
@@ -43,7 +46,6 @@ Template.biding.events({
       if (error){
         throwError(error.reason);
       } else {
-        // $body.val('');
         $(e.target).find('[name=price]').val('');
       }
     });

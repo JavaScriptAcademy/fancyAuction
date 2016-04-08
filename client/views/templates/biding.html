@@ -2,13 +2,13 @@
   <div class="biding">
     <div class="col-md-4">
       <div class="biding-item-image biding-top">
-        <img src="{{image}}">
+        <img src="{{item.image}}">
       </div>
       <div class="biding-item-detail biding-down">
-        <div>ID: Lot-{{_id}}</div>
-        <div>Name: {{name}}</div>
-        <div>Starting bid: {{initPrice}}</div>
-        <div>seller's estimate: {{estimatePriceFrom}} ~ {{estimatePriceTo}}</div>
+        <div>ID: Lot-{{item._id}}</div>
+        <div>Name: {{item.name}}</div>
+        <div>Starting bid: {{item.initPrice}}</div>
+        <div>seller's estimate: {{item.estimatePriceFrom}} ~ {{item.estimatePriceTo}}</div>
       </div>
     </div>
     <div class="col-md-4">
@@ -32,7 +32,9 @@
       </div>
     </div>
     <div class="col-md-4">
-      <div class="biding-graph"></div>
+      <div class="biding-graph">
+        {{> bidgraph}}
+      </div>
     </div>
   </div>
 </template>

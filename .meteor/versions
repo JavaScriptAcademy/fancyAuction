@@ -22,6 +22,7 @@ caching-compiler@1.0.2
 caching-html-compiler@1.0.4
 callback-hook@1.0.6
 check@1.1.2
+d3js:d3@3.5.8
 ddp@1.2.3
 ddp-client@1.2.3
 ddp-common@1.2.3
@@ -70,6 +71,7 @@ mongo@1.1.5
 mongo-id@1.0.2
 npm-bcrypt@0.7.8_2
 npm-mongo@1.4.41
+nvd3:nvd3@1.8.2
 observe-sequence@1.0.9
 ordered-dict@1.0.5
 promise@0.6.5
