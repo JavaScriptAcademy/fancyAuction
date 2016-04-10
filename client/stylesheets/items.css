@@ -1,0 +1,14 @@
+.items-list-top{
+  margin-top: 2rem;
+}
+
+.items-list-image img{
+  width: 100%;
+  height: 17rem;
+}
+
+.items-list-label{
+  font-weight: bold;
+  text-decoration-color: black;
+}
+

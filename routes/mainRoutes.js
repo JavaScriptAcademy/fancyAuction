@@ -9,16 +9,16 @@ Router.route('/',{
   }
 });
 
-/*Router.route('/items',{
+Router.route('/items',{
   name: 'items',
   template: 'items',
   data: function(){
-    return {};
+    return {items:Items.find({})};
   }
-});*/
+});
 
 Router.route('/items/:_id',{
-  name: 'items',
+  name: 'itemDetail',
   template: 'itemDetail',
   data: function(){
     return { itemId:this.params._id };

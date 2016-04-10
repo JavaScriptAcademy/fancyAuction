@@ -1,0 +1,21 @@
+<template name="items">
+  <div class="row items-list-top">
+  {{#each items}}
+    <div class="row col-lg-8 col-lg-offset-2">
+        <a class="items-list-link" href="/items/{{_id}}">
+          <div class="col-lg-5 items-list-image thumbnail">
+            <img src="{{image}}">
+          </div>
+        </a>
+        <div class="col-lg-7">
+          <div><span class="items-list-label">Lot ID: </span> Lot {{_id}}</div>
+          <div><span class="items-list-label">{{name}}</span></div>
+          <div><span class="items-list-label">Event start: </span>Monday 10:00 AM</div>
+          <div><span class="items-list-label">Starting bid: </span> ${{initPrice}}</div>
+          <div><span class="items-list-label">Seller's estimate: </span> ${{estimatePriceFrom}} To ${{estimatePriceTo}}</div>
+          <div class="item-detail-top"><a href="/items/{{_id}}" class="btn btn-info" role="button">See detail</a></div>
+        </div>
+    </div>
+  {{/each}}
+  </div>
+</template>
