@@ -10,7 +10,8 @@
         <div class="col-lg-7">
           <div><span class="items-list-label">Lot ID: </span> Lot {{_id}}</div>
           <div><span class="items-list-label">{{name}}</span></div>
-          <div><span class="items-list-label">Event start: </span>Monday 10:00 AM</div>
+          <div><span class="items-list-label">Event start: </span>{{startTime}}</div>
+          <div><span class="items-list-label">Event end: </span>{{endTime}}</div>
           <div><span class="items-list-label">Starting bid: </span> ${{initPrice}}</div>
           <div><span class="items-list-label">Seller's estimate: </span> ${{estimatePriceFrom}} To ${{estimatePriceTo}}</div>
           <div class="item-detail-top"><a href="/items/{{_id}}" class="btn btn-info" role="button">See detail</a></div>

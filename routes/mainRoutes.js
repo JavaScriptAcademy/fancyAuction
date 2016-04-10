@@ -33,7 +33,10 @@ Router.route('/biding/:_id', {
   }
 });
 
-/*Router.route('/signinregister', {
-  name: 'signinRegister',
-  template: 'signinRegister'
-});*/
+Router.route('/cart',{
+  name: 'cart',
+  template: 'cart',
+  data: function(){
+    return {};
+  }
+});

@@ -1,6 +1,9 @@
 Template.biding.helpers({
   item: function(){
-    return Items.findOne({_id: this.itemId});
+    var item = Items.findOne({_id: this.itemId});
+    item.startTime = item.startTime.toUTCString();
+    item.endTime = item.endTime.toUTCString();
+    return item;
   },
   bidPrices: function(){
     var auction = Auctions.findOne({ itemId: this.itemId });
@@ -24,6 +27,16 @@ Template.biding.events({
       return;
     }
     var item = Items.findOne({ _id: this.itemId });
+    var currtentTime = new Date();
+    if(currtentTime < item.startTime){
+      alert("The bid is not beginning!");
+      return;
+    }
+
+    if(currtentTime > item.endTime){
+      alert("The bid is already finished");
+      return;
+    }
     var largestPrice = item.initPrice;
     var auction = Auctions.findOne({ itemId: this.itemId });
     if(auction !== undefined){

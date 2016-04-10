@@ -1,0 +1,18 @@
+<template name="cart">
+  {{#each cartItems}}
+    <div class="row col-lg-8 col-lg-offset-2">
+        <a class="cart-list-link" href="/items/{{_id}}">
+          <div class="col-lg-5 cart-list-image thumbnail">
+            <img src="{{image}}">
+          </div>
+        </a>
+        <div class="col-lg-7">
+          <div><span class="cart-list-label">Lot ID: </span> Lot {{_id}}</div>
+          <div><span class="cart-list-label">{{name}}</span></div>
+          <div><span class="cart-list-label">Starting bid: </span> ${{initPrice}}</div>
+          <!-- <div><span class="cart-list-label">Final bid: </span> ${{}}</div> -->
+          <div class="item-detail-top"><a href="#" class="btn btn-info" role="button">Pay</a></div>
+        </div>
+    </div>
+  {{/each}}
+</template>

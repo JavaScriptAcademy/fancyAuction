@@ -8,8 +8,9 @@
         <div class="col-lg-6">
           <div><span class="item-detail-label">Lot ID: </span> Lot {{item._id}}</div>
           <div class="item-detail-top"><span class="item-detail-label">{{item.name}}</span></div>
-          <div class="item-detail-top"><span class="item-detail-label"></span><a href="">Event link here</a></div>
-          <div class="item-detail-top"><span class="item-detail-label">Event start: </span>Monday 10:00 AM</div>
+<!--           <div class="item-detail-top"><span class="item-detail-label"></span><a href="">Event link here</a></div> -->
+          <div class="item-detail-top"><span class="item-detail-label">Event start: </span>{{item.startTime}}</div>
+          <div class="item-detail-top"><span class="item-detail-label">Event End: </span>{{item.endTime}}</div>
           <div class="item-detail-top"><span class="item-detail-label">Starting bid: </span> ${{item.initPrice}}</div>
           <div class="item-detail-top"><span class="item-detail-label">Seller's estimate: </span> ${{item.estimatePriceFrom}} To ${{item.estimatePriceTo}}</div>
           <div class="item-detail-top"><a href="/biding/{{item._id}}" class="btn btn-info" role="button">Go to bid</a></div>

@@ -3,6 +3,8 @@ ItemSchema = new SimpleSchema({
   image: { type: String },
   initPrice: { type: Number },
   description: { type: String },
+  startTime:{ type: Date },
+  endTime: { type: Date },
   estimatePriceFrom: { type: Number },
   estimatePriceTo: { type: Number }
 });
