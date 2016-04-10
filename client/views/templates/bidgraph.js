@@ -25,7 +25,7 @@ Template.bidgraph.rendered = function() {
     .showLegend(true)       //Show the legend, allowing users to turn on/off line series.
     .showYAxis(true)        //Show the y-axis
     .showXAxis(true)        //Show the x-axis
-    .forceY([0,2000000])
+    .forceY([0,99999])
     ;
 
   nv.addGraph(function() {

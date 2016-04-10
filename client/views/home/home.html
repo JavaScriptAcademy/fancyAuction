@@ -18,5 +18,20 @@
         </div>
       </div><!-- /.col-lg-6 -->
     </form>
+  </div><!--/. home-search-form  -->
+
+  <div class="home-body-content">
+    <div class="row">
+      {{#each items}}
+        <div class="col-lg-4">
+          <a href="/items/{{_id}}">
+            <div class="home-item-image">
+              <img src="{{image}}">
+            </div>
+            <div>ID: {{_id}}</div>
+          </a>
+        </div>
+      {{/each}}
+    </div>
   </div>
 </template>

@@ -19,6 +19,10 @@ Template.biding.helpers({
 Template.biding.events({
   'submit form': function(e){
     e.preventDefault();
+    if(!Meteor.user()){
+      alert("You should login");
+      return;
+    }
     var item = Items.findOne({ _id: this.itemId });
     var largestPrice = item.initPrice;
     var auction = Auctions.findOne({ itemId: this.itemId });
