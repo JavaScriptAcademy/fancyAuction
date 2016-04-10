@@ -33,7 +33,7 @@ Template.biding.events({
     if( !isNum(newBidPrice) ){
       alert("You should put in a Integer!");
       $(e.target).find('[name=price]').val('');
-    }else if( Number(newBidPrice) <= Number(largestPrice)){
+    }else if( Number(newBidPrice) < Number(largestPrice)){
       alert("Your biding price is lower than current largest price!");
       $(e.target).find('[name=price]').val('');
     }else{

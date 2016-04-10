@@ -9,6 +9,22 @@ Router.route('/',{
   }
 });
 
+/*Router.route('/items',{
+  name: 'items',
+  template: 'items',
+  data: function(){
+    return {};
+  }
+});*/
+
+Router.route('/items/:_id',{
+  name: 'items',
+  template: 'itemDetail',
+  data: function(){
+    return { itemId:this.params._id };
+  }
+});
+
 Router.route('/biding/:_id', {
   name: 'biding',
   data: function() {
