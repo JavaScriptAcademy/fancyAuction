@@ -2,6 +2,13 @@ Router.configure({
   layoutTemplate: 'layout'
 });
 
+Router.route('/',{
+  name: 'home',
+  data: function(){
+    return {};
+  }
+});
+
 Router.route('/biding/:_id', {
   name: 'biding',
   data: function() {
