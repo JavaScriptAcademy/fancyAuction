@@ -43,12 +43,13 @@ Template.bidgraph.rendered = function() {
       console.log(auction.bidPrices);
       var bidXY = [];
       for(var i = 0; i < auction.bidPrices.length; i++){
-        bidXY.push({ x:i+1, y:auction.bidPrices[i].price });
+        bidXY.push({ x:i+1, y:auction.bidPrices[i].price });chart
         console.log(auction.bidPrices[i].price);
       }
 
       var bidData = [{values: bidXY, key: 'Trendency', col: '#2ca02c'}]
       d3.select('#chart svg').datum(bidData).call(chart);
+      chart.yDomain([0,auction.bidPrices[auction.bidPrices.length-1].price]);
       chart.update();
      }
   });

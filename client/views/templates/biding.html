@@ -2,8 +2,11 @@
   <div class="biding">
     <div class="col-md-4">
       <div class="biding-item-image biding-top">
-        <img src="{{item.image}}">
+        <!-- <img src="{{item.image}}"> -->
+        <div style="background-image: url({{item.image}});background-size: cover;
+    height: 100%;"></div>
       </div>
+
       <div class="biding-item-detail biding-down">
         <div>ID: Lot-{{item._id}}</div>
         <div>Name: {{item.name}}</div>

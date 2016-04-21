@@ -7,12 +7,15 @@
 }
 .biding-top{
   width: 100%;
-  height: 20rem;
+  height: 40rem;
 }
 
 .biding-down{
   width: 100%;
-  height: 10rem;
+  height: 15rem;
+  padding: 15px;
+  font-family: Consolas, monaco, monospace;
+  font-weight: 600;
 }
 
 .biding-top img{
@@ -21,12 +24,18 @@
 }
 .biding-graph{
   width: 100%;
-  height: 30rem;
+  height: 55rem;
   border: solid 0.5px;
 }
 .biding-input-buttion{
-  margin-top: 1rem;
+  margin-top: 3rem;
 }
 .biding .col-md-4{
   padding: 0;
+}
+.bidPrice .price-detail{
+  font-family: Consolas, monaco, monospace;
+  font-weight: bold;
+  padding: 1rem;
+  margin: 0;
 }

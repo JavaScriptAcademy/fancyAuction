@@ -8,10 +8,10 @@ Template.biding.helpers({
   bidPrices: function(){
     var auction = Auctions.findOne({ itemId: this.itemId });
     if(auction){
-      if(auction.bidPrices.length <= 4){
+      if(auction.bidPrices.length <= 8){
       return auction.bidPrices;
     }else{
-      prices = auction.bidPrices.slice(auction.bidPrices.length-4,auction.bidPrices.length);
+      prices = auction.bidPrices.slice(auction.bidPrices.length-8,auction.bidPrices.length);
       return prices;
     }
     }
@@ -46,8 +46,8 @@ Template.biding.events({
     if( !isNum(newBidPrice) ){
       alert("You should put in a Integer!");
       $(e.target).find('[name=price]').val('');
-    }else if( Number(newBidPrice) < Number(largestPrice)){
-      alert("Your biding price is lower than current largest price!");
+    }else if( Number(newBidPrice) <= Number(largestPrice)){
+      alert("Your biding price should  larger than current largest price!");
       $(e.target).find('[name=price]').val('');
     }else{
       var bidItem = {
